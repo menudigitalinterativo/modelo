@@ -27,10 +27,27 @@
   <div class="container">
     <div id="menu-content"></div>
   </div>
-  <div id="cart-float">
-    <i class="fas fa-shopping-cart"></i>
-    <span id="cart-count">0</span>
+ <div class="cart-body">
+  <label>Seu Nome</label>
+  <input id="client-name" type="text" placeholder="Digite seu nome">
+  
+  <label style="margin-top: 15px; display: block;">Bairro / Local de Entrega</label>
+  <select id="select-bairro" onchange="atualizarTotalComFrete()" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ddd; margin-bottom: 15px;">
+    <option value="">Selecione seu bairro...</option>
+    </select>
+  <div id="cart-items"></div>
+  <div id="resumo-valores" style="margin-top: 15px; border-top: 1px dashed #ccc; padding-top: 10px; font-weight: bold;">
+    <div style="display: flex; justify-content: space-between;">
+      <span>Subtotal:</span> <span id="subtotal-carrinho">R$ 0,00</span>
+    </div>
+    <div style="display: flex; justify-content: space-between; color: #d9534f;">
+      <span>Taxa de Entrega:</span> <span id="taxa-entrega-display">R$ 0,00</span>
+    </div>
+    <div style="display: flex; justify-content: space-between; font-size: 1.2em; margin-top: 5px;">
+      <span>Total:</span> <span id="total-geral">R$ 0,00</span>
+    </div>
   </div>
+</div>
   <div id="cart-modal">
     <div class="cart-modal-content">
       <div class="drag-handle"></div>
